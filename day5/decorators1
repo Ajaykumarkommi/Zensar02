@@ -1,0 +1,23 @@
+def nozero(fun):
+    def helper(x,y):
+        if x==0 or y==0:
+            print("no operations with zero")
+        else:
+            print(fun(x,y))
+    return helper
+
+@nozero
+def div(x,y):
+   return x/y
+
+@nozero
+def mul(x,y):
+   return x*y
+
+@nozero
+def add(x,y):
+   return x+y
+@nozero
+def sub(x,y):
+   return x-y
+div(0,5)
