@@ -1,0 +1,19 @@
+def drawborder(fun):
+    def innerfun(*args):
+        print("*" * 40)
+        fun(*args)
+        print("#" * 40)
+    return innerfun
+
+
+@drawborder
+def greet(msg):
+    print("greet",msg)
+
+@drawborder
+def RSVP(msg):
+    print("RSVP",msg)
+
+
+greet("ajay")
+RSVP("hello")
