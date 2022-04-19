@@ -1,0 +1,94 @@
+print("___prob1___"*1)
+dic1={1:10,2:20}
+dic2={3:30,4:40}
+dic3={5:50,6:60}
+dic4={}
+dic4.update(dic1)
+dic4.update(dic2)
+dic4.update(dic3)
+print(dic4)
+print("___prob2___"*1)
+d1={1:10,2:20,3:30,4:40,5:50,6:60}
+def is_presented(x):
+    if x in d1:
+        print("key present")
+    else:
+       print("key not present")
+is_presented(1)
+is_presented(4)
+is_presented(9)
+print("___prob3___"*1)
+d={'a':'cow','b':'dog','c':'tiger','d':'monkey'}
+for key,value in d.items():
+    print(key,value)
+print("___prob4___"*1)
+n=5
+dict=dict()
+for i in range(1,n+1):
+    dict[i]=i*i
+print(dict)
+print("___prob5___"*1)
+def removeDuplicates(dic):
+
+    temp = []
+
+    res = {}
+
+    for key, val in dic.items():
+
+        if val not in temp:
+
+            temp.append(val)
+
+            res[key] =  val
+
+    return res
+print(removeDuplicates({"a":10,"b":20,"c":30,"d":20}))
+print("___prob6___"*1)
+dict={'ajay':3,'leela':4,'tharun':1,'kranthi':6}
+print(min(dict,key=dict.get))
+print("___prob7___"*1)
+l=[1,2,3,4,5,6,7]
+l.reverse()
+print(l)
+print("____prob8____"*1)
+l=[1,2,4,3,6,5,9,6,0,5,4]
+value=4
+try:
+    while True:
+        l.remove(value)
+except ValueError:
+    pass
+print(l)
+print("____prob9____")
+l=[1,2,3,4,5,6,7,8]
+sum=sum(l)
+print(f"sum:{sum}")
+print("___prob10____")
+l=[10,54,63,21,7,43]
+l.sort()
+print(l[-2])
+print("____prob11___")
+l=[2,87,8,5,32,77]
+l.sort()
+print(l[1])
+print("___prob12___")
+l=[1,2,3,4,1,21,23,6,7,9,0,32]
+k=set(l)
+f=list(k)
+print(f)
+print("_____prob13____")
+l=[10,20,30,40,50,20]
+n=20
+count=l.count(n)
+print(count)
+print("____prob14______")
+l1=[1,2,4,7,9]
+l2=[1,3,4,7,5,9]
+l=set(l1).intersection(set(l2))
+print(l)
+print("____prob15____")
+def list_count(l1):
+    return len(l1)
+l1=[[1,2],[3,5],[7,8],[5,6],[1,5,7]]
+print(list_count(l1))
